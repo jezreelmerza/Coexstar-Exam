@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(./img/Background.jpg);
+}
+
+.container {
+  height: 60px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container .logo {
+  max-width: 250px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.container .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+}
+
+.container .logo a img {
+  max-width: 100%;
+  max-height: 60px;
+}
+
+.container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row-reverse;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 10px;
+
+}
+
+.container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container .navbar ul li a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 16px;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  padding: 0 10px;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.container .navbar ul li a:hover {
+  color: #8D78EF;
+}
+
+.container .navbar ul .close {
+  display: none;
+  text-align: right;
+  padding: 10px;
+}
+
+.container .navbar ul .close span {
+  font-size: 40px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.container .navbar .icon-bar {
+  padding: 18px 8px;
+  width: 50px;
+  height: 60px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.container .navbar .icon-bar i {
+  background-color: black;
+  height: 2px;
+}
+
+.body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.signupBtn {
+  font-size: 15px;
+  background-color: #8D78EF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 40px;
+  height: 42px;
+  width: 120px;
+  align-self: center;
+  margin-right: 80px;
+}
+
+.signup-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.signup-intro{
+  width: 100%;
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 35px;
+}
+
+.signup-paragraph{
+  font-size: 17px;
+  width: 25%;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.signup-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.signup-form > input{
+  width: 50%;
+  height: 50px;
+  margin-bottom: 10px;
+  border-style: none;
+  border-radius: 30px;
+  padding-left: 25px;
+  font-size: 18px;
+}
+
+.signup-form > label{
+  width: 48%;
+  margin:0 0 5px 25px;
+  text-align: left;
+}
+
+.signup-submit{
+  font-size: 16px;
+  color: #ffffff;
+  width: 50%;
+  height: 50px;
+  margin-top: 20px;
+  border-style: none;
+  border-radius: 30px;
+  background-color: #8D78EF;
+}
+
+@media only screen and (max-width: 871px) {
+  .container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .container .logo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .container .navbar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+  }
+
+  .container .navbar ul {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: fixed;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+  }
+
+  .list {
+    align-self: center;
+  }
+
+  .container .navbar ul li a {
+    padding: 10px;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    color: #555555;
+  }
+
+  .container .navbar ul .close {
+    display: block;
+  }
+
+  .container .navbar .icon-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .container .navbar ._Menus-show {
+    left: 0;
+  }
+  .signupBtn{
+    margin-left: 60px;
+  }
+
+  .signup-paragraph{
+    font-size: 15px;
+    width: 80%;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .signup-title {
+    font-size: 30px;
+  }
+
+  .signup-form > input{
+    width: 80%;
+    height: 40px;
+    font-size: 15px;
+    padding-left: 22px;
+  }
+
+  .signup-form > label{
+    font-size: 13px;
+    width: 75%;
+  }
+
+  .signup-submit{
+    width: 80%;
+    height: 40px;
+  }
+}
